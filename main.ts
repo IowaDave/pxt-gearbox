@@ -44,11 +44,15 @@ namespace gearbox {
     //% block=convert|%radians|radians|to|heading
     //% group="Functions"
     export function rad2head(radians: number): number {
+        // limit the maximum value to 2*pi radians
+        while (radians > (2 * Math.PI)) {
+            radians -= (2 * Math.PI);
+        }
         let degrees = radians * degreesPerRadian();
         if (degrees > 90) {
-            return 450 - degrees;
+            return 450.0 - degrees;
         } else {
-            return 90 - degrees;
+            return 90.0 - degrees;
         }
     }
     /**
@@ -64,9 +68,9 @@ namespace gearbox {
                 return undefined;
             }
             if (y > 0) {
-                return 0;
+                return 0.0;
             } else {
-                return 180;
+                return 180.0;
             }
         }
         return rad2head(Math.atan2(y, x));
