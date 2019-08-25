@@ -17,6 +17,7 @@ namespace gearbox {
      * return the value of pi
      */
     //% block
+    //% group="Constants"
     export function pi():number {
         return Math.PI;
     }
