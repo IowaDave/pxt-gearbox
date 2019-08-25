@@ -105,4 +105,14 @@ namespace gearbox {
     export function roundDown(arg: number): number {
         return Math.floor(arg);
     }
+    /**
+     * Another name for the "truncate" math block.
+     * Returns the nearest integer that is
+     * closer to zero than the argument.
+     */
+    //% block
+    //% group="Functions"
+    export function roundTowardZero(arg: number): number {
+        return Math.trunc(arg);
+    }
 }
