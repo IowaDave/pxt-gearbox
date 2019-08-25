@@ -13,10 +13,10 @@ namespace gearbox {
     export function comment(theComment: string): void {
         // do nothing
     }
-        /**
+     /**
      * return the value of pi
      */
-    //% block
+    //% block="pi"
     //% group="Constants"
     export function pi():number {
         return Math.PI;
