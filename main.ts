@@ -85,4 +85,24 @@ namespace gearbox {
     export function round(value: number, precision:number): number {
         return Math.roundWithPrecision(value, precision);
     }
+    /**
+     * Another name for the "ceiling" math block.
+     * Returns the lowest integer that is
+     * more than the argument.
+     */
+    //% block
+    //% group="Functions"
+    export function roundUp(arg: number): number {
+        return Math.ceil(arg);
+    }
+    /**
+     * Another name for the "floor" math block.
+     * Returns the greatest integer that is
+     * less than the argument.
+     */
+    //% block
+    //% group="Functions"
+    export function roundDown(arg: number): number {
+        return Math.floor(arg);
+    }
 }
